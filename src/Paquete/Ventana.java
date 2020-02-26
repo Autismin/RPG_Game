@@ -24,13 +24,14 @@ public class Ventana extends JFrame implements MouseListener {
 	JPanel panel = new JPanel();
 	JLabel etiqueta1 = new JLabel();
 	JLabel etiqueta2 = new JLabel();
+	JLabel etiqueta3 = new JLabel();
 	
 	public Ventana () {
 		
 		setSize(ANCHO_ESCALADO,ALTO_ESCALADO);
 		setResizable(false);
 		setLocationRelativeTo(null);
-		setTitle("RPG Game 1.0");
+		setTitle("RPG Game 1.0.1");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		Panel1();
 	}
@@ -61,6 +62,17 @@ public class Ventana extends JFrame implements MouseListener {
 		etiqueta2.setForeground(Color.black);
 		etiqueta2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(etiqueta2);
+		
+		etiqueta3.setSize(ANCHO_ESCALADO/12,ALTO_ESCALADO/16);
+		etiqueta3.setLocation(ANCHO_ESCALADO/40,ALTO_ESCALADO/25);
+		etiqueta3.setOpaque(true);
+		etiqueta3.setBackground(Color.white);
+		etiqueta3.setText("+1/click");
+		etiqueta3.setFont(new Font("unispace",0,ANCHO_ESCALADO/80));
+		etiqueta3.setForeground(Color.black);
+		etiqueta3.setHorizontalAlignment(SwingConstants.CENTER);
+		etiqueta3.addMouseListener(this);
+		panel.add(etiqueta3);
 	}
 
 	@Override
@@ -84,7 +96,5 @@ public class Ventana extends JFrame implements MouseListener {
 	public void mouseReleased(MouseEvent arg0) {
 		
 		panel.setBackground(Color.black);
-		
-		//alo polisia
 	}
 }
