@@ -84,5 +84,7 @@ public class Ventana extends JFrame implements MouseListener {
 	public void mouseReleased(MouseEvent arg0) {
 		
 		panel.setBackground(Color.black);
+		
+		//alo polisia
 	}
 }
