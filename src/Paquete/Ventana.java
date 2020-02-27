@@ -3,14 +3,15 @@ package Paquete;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
-
-import javax.swing.SwingConstants;
 
 public class Ventana extends JFrame implements MouseListener {
 
@@ -28,7 +29,9 @@ public class Ventana extends JFrame implements MouseListener {
 	JLabel sumarPuntos = new JLabel();
 	JLabel dinero = new JLabel();
 	JLabel mejoraDinero = new JLabel();
-	JLabel costeUpgrade = new JLabel();
+	JLabel costeUpgrade = new JLabel();	
+	ImageIcon moneda = new ImageIcon("moneda.png");
+	JLabel monedaJuego = new JLabel();
 	
 	public Ventana () {
 		
@@ -58,7 +61,7 @@ public class Ventana extends JFrame implements MouseListener {
 		panel.add(sumarPuntos);
 		
 		dinero.setSize(ANCHO_ESCALADO/12,ALTO_ESCALADO/16);
-		dinero.setLocation(ANCHO_ESCALADO*8/9,ALTO_ESCALADO/25);
+		dinero.setLocation(ANCHO_ESCALADO*7/8,ALTO_ESCALADO/25);
 		dinero.setOpaque(true);
 		dinero.setBackground(Color.white);
 		dinero.setText(String.valueOf(monedas));
@@ -87,6 +90,11 @@ public class Ventana extends JFrame implements MouseListener {
 		costeUpgrade.setForeground(Color.black);
 		costeUpgrade.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(costeUpgrade);
+		
+		monedaJuego.setSize(ANCHO_ESCALADO/32,ALTO_ESCALADO/18);
+		monedaJuego.setLocation(ANCHO_ESCALADO*24/25,ALTO_ESCALADO/22);
+		monedaJuego.setIcon(new ImageIcon(moneda.getImage().getScaledInstance(ANCHO_ESCALADO/32, ALTO_ESCALADO/18, Image.SCALE_SMOOTH)));
+		panel.add(monedaJuego);
 		
 	}
 	
