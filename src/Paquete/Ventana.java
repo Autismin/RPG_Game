@@ -118,7 +118,6 @@ public class Ventana extends JFrame implements MouseListener {
 		
 		if (e.getComponent().equals(sumarPuntos)) {
 			
-			panel.setBackground(Color.red);
 	        actDinero(mejora);
 		}
 	
@@ -134,8 +133,5 @@ public class Ventana extends JFrame implements MouseListener {
 	}
 	
 	@Override
-	public void mouseReleased(MouseEvent e) {
-		
-		panel.setBackground(Color.black);
-	}
+	public void mouseReleased(MouseEvent e) {}
 }
